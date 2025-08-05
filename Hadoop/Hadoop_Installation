@@ -12,3 +12,33 @@ Hadoop(HDFS)
 • How Files Are Stored
 • HDFS Commands
 • Hadoop Daemons
+
+
+
+ 
+sudo apt update
+sudo apt upgrade -y
+
+sudo apt install default-jdk -y
+
+sudo addgroup hadoop_group
+sudo adduser --ingroup hadoop_group hadoop_user
+
+
+sudo su - hadoop_user
+ssh-keygen -t rsa -P ""
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 0600 ~/.ssh/authorized_keys
+
+wget https://downloads.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
+
+tar -xzf hadoop-3.3.6.tar.gz
+sudo mv hadoop-3.3.6 /usr/local/hadoop
+
+sudo chown -R hadoop_user:hadoop_group /usr/local/hadoop
+export JAVA_HOME=/usr/lib/jvm/default-java
+
+Follow from Step 3 in PDF
+
+
+
