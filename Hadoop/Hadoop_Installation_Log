@@ -1,0 +1,244 @@
+--Ignore Home Brew
+
+which hadoop
+/opt/homebrew/bin/hadoop
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads % echo $HADOOP_HOME
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads % which hadoop
+/opt/homebrew/bin/hadoop
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads % nano ~/.zshrc
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads % source ~/.zshrc
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads %
+
+
+
+/*
+find /opt/homebrew/bin/hadoop -name "hadoop-mapreduce-examples*.jar"
+
+*/
+
+find $HADOOP_HOME -name "hadoop-mapreduce-examples*.jar"
+
+brew list hadoop
+/opt/homebrew/Cellar/hadoop/3.4.1/bin/hadoop
+/opt/homebrew/Cellar/hadoop/3.4.1/bin/hdfs
+/opt/homebrew/Cellar/hadoop/3.4.1/bin/mapred
+/opt/homebrew/Cellar/hadoop/3.4.1/bin/yarn
+/opt/homebrew/Cellar/hadoop/3.4.1/libexec/bin/ (4 files)
+/opt/homebrew/Cellar/hadoop/3.4.1/libexec/etc/ (29 files)
+/opt/homebrew/Cellar/hadoop/3.4.1/libexec/libexec/ (39 files)
+/opt/homebrew/Cellar/hadoop/3.4.1/libexec/logs/ (13 files)
+/opt/homebrew/Cellar/hadoop/3.4.1/libexec/sbin/ (36 files)
+/opt/homebrew/Cellar/hadoop/3.4.1/libexec/share/ (20041 files)
+/opt/homebrew/Cellar/hadoop/3.4.1/libexec/ (5 files)
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/FederationStateStore
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/distribute-exclude.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/hadoop-daemon.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/hadoop-daemons.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/httpfs.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/kms.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/mr-jobhistory-daemon.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/refresh-namenodes.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/start-all.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/start-balancer.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/start-dfs.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/start-secure-dns.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/start-yarn.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/stop-all.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/stop-balancer.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/stop-dfs.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/stop-secure-dns.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/stop-yarn.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/workers.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/yarn-daemon.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbin/yarn-daemons.sh
+/opt/homebrew/Cellar/hadoop/3.4.1/sbom.spdx.json
+
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads % nano ~/.zshrc
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads % source ~/.zshrc
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads % 
+
+
+
+echo $HADOOP_HOME
+echo $JAVA_HOME
+hadoop version
+
+/usr/local/Cellar/hadoop/3.4.1/libexec
+/opt/homebrew/Cellar/openjdk@17/17.0.15/libexec/openjdk.jdk/Contents/Home
+ERROR: Cannot execute /usr/local/Cellar/hadoop/3.4.1/libexec/libexec/hadoop-config.sh.
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads % 
+
+
+/Chat suggest/
+
+Option 1: Manually override HADOOP_LIBEXEC_DIR
+Update your .zshrc and force-set the correct internal path:
+bash
+CopyEdit
+export HADOOP_HOME=/usr/local/Cellar/hadoop/3.4.1
+export HADOOP_LIBEXEC_DIR=$HADOOP_HOME/libexec
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+
+ls -l /usr/local/Cellar/hadoop/3.4.1/libexec/hadoop-config.sh
+
+ls: /usr/local/Cellar/hadoop/3.4.1/libexec/hadoop-config.sh: No such file or directory
+
+
+brew uninstall hadoop
+brew install hadoop
+
+
+
+brew uninstall hadoop
+Uninstalling /opt/homebrew/Cellar/hadoop/3.4.1... (20,199 files, 1.3GB)
+==> Autoremoving 1 unneeded formula:
+openjdk@11
+Uninstalling /opt/homebrew/Cellar/openjdk@11/11.0.28... (667 files, 296.2MB)
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads % brew install hadoop
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+==> Fetching downloads for: hadoop
+==> Downloading https://ghcr.io/v2/homebrew/core/hadoop/manifests/3.4.1
+Already downloaded: /Users/dhandapanidhandapaniyedappalli/Library/Caches/Homebrew/downloads/7cf1c8cfdd6c5471260cadc82644cdc52ab5ade41e4def5430ce9128dafce427--hadoop-3.4.1.bottle_manifest.json
+==> Fetching dependencies for hadoop: openjdk@11
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/11/manifests/11.0.28
+Already downloaded: /Users/dhandapanidhandapaniyedappalli/Library/Caches/Homebrew/downloads/855108ba8fb23b32ca4fe64a632e32e64a67cdc927c6ba12a9cc593967cdf2bc--openjdk@11-11.0.28.bottle_manifest.json
+==> Fetching openjdk@11
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/11/blobs/sha256:cadeb8b67fddfad5831b43590417fd0bc0b259c03baf162bdfc13dd99aa4a7ca
+Already downloaded: /Users/dhandapanidhandapaniyedappalli/Library/Caches/Homebrew/downloads/3466919de6c61722d245f05892627ba86eb7f5c1e7b967372efd512b162f7734--openjdk@11--11.0.28.arm64_sonoma.bottle.tar.gz
+==> Fetching hadoop
+==> Downloading https://ghcr.io/v2/homebrew/core/hadoop/blobs/sha256:f85402488931c97be6c4c8eb13b1c802a417aa79cef03b59a6b294a51c34f261
+Already downloaded: /Users/dhandapanidhandapaniyedappalli/Library/Caches/Homebrew/downloads/a322aa4b80c3dad13d22da2c51588c0e7796ee2a1050190d3e3a610f1f21c314--hadoop--3.4.1.arm64_sonoma.bottle.tar.gz
+==> Installing hadoop dependency: openjdk@11
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/11/manifests/11.0.28
+Already downloaded: /Users/dhandapanidhandapaniyedappalli/Library/Caches/Homebrew/downloads/855108ba8fb23b32ca4fe64a632e32e64a67cdc927c6ba12a9cc593967cdf2bc--openjdk@11-11.0.28.bottle_manifest.json
+==> Pouring openjdk@11--11.0.28.arm64_sonoma.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/openjdk@11/11.0.28: 667 files, 296.2MB
+==> Pouring hadoop--3.4.1.arm64_sonoma.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/hadoop/3.4.1: 20,186 files, 1.3GB
+==> Running `brew cleanup hadoop`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> No outdated dependents to upgrade!
+
+
+
+Manual installation from chatgpt :-
+
+Option 1: Install Hadoop manually instead of using Homebrew
+
+Since Homebrew's formula for Hadoop 3.4.1 is incomplete, I highly recommend switching to a manual installation.
+🔧 Manual Installation Steps (Tested and Reliable):
+1. 📦 Download Hadoop 3.4.1 from Apache:
+bash
+CopyEdit
+cd ~/Downloads
+curl -O https://downloads.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
+
+
+
+cd ~/Downloads
+curl -O https://downloads.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  928M  100  928M    0     0  15.1M      0  0:01:01  0:01:01 --:--:-- 15.5M
+
+
+2. 📂 Extract to /usr/local/hadoop
+bash
+CopyEdit
+sudo mkdir -p /usr/local/hadoop
+sudo tar -xzf hadoop-3.4.1.tar.gz -C /usr/local/hadoop --strip-components=1
+
+
+
+
+3. ✅ Set up environment variables in .zshrc:
+bash
+CopyEdit
+nano ~/.zshrc
+Add:
+bash
+CopyEdit
+# Manually installed Hadoop
+export HADOOP_HOME=/usr/local/hadoop
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+
+
+brew uninstall hadoop
+
+Uninstalling /opt/homebrew/Cellar/hadoop/3.4.1... (20,186 files, 1.3GB)
+==> Autoremoving 1 unneeded formula:
+openjdk@11
+Uninstalling /opt/homebrew/Cellar/openjdk@11/11.0.28... (667 files, 296.2MB)
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro Downloads % rm -rf /usr/local/Cellar/hadoop
+rm -rf /usr/local/opt/hadoop
+
+
+/usr/local/hadoop/libexec/hadoop-config.sh
+
+
+cd ~/Downloads
+curl -O https://downloads.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  928M  100  928M    0     0  15.2M      0  0:01:00  0:01:00 --:--:-- 16.1M
+
+sudo mkdir -p /usr/local/hadoop
+sudo tar -xzf hadoop-3.4.1.tar.gz -C /usr/local/hadoop --strip-components=1
+
+
+ls /usr/local/hadoop
+LICENSE-binary	NOTICE-binary	README.txt	etc		lib		licenses-binary	share
+LICENSE.txt	NOTICE.txt	bin		include		libexec		sbin
+
+
+
+ls /usr/local/hadoop/libexec/hadoop-config.sh
+/usr/local/hadoop/libexec/hadoop-config.sh
+
+
+export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/4.0.0/libexec
+#export PATH=$SPARK_HOME/bin:$PATH
+#export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+#export HADOOP_HOME=/usr/local/hadoop
+#export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+
+# Hadoop 3.4.1 via Homebrew
+#export HADOOP_HOME=/usr/local/Cellar/hadoop/3.4.1/libexec
+#export HADOOP_HOME=/usr/local/Cellar/hadoop/3.4.1
+#export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+#export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+#export JAVA_HOME=$(/usr/libexec/java_home)
+
+#Option 1: Manually override HADOOP_LIBEXEC_DIR
+#Update your .zshrc and force-set the correct internal path:
+#export HADOOP_HOME=/usr/local/Cellar/hadoop/3.4.1
+#export HADOOP_LIBEXEC_DIR=$HADOOP_HOME/libexec
+#export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+#export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+#export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Manually installed Hadoop
+#export HADOOP_HOME=/usr/local/hadoop/bin/hadoop
+export HADOOP_HOME=/usr/local/Cellar/hadoop/3.4.1
+#export HADOOP_HOME=/usr/local/hadoop/bin/hadoop
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/dhandapanidhandapaniyedappalli/.lmstudio/bin"
+# End of LM Studio CLI section
