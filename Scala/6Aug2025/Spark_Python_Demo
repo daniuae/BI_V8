@@ -1,0 +1,39 @@
+import sys
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import count
+
+def process_data():
+    spark = (SparkSession
+             .builder
+             .appName("PythonSampleDataCount")
+             .getOrCreate()
+             )
+
+    file_path = "sample_data.csv"
+    sample_df = (spark.read.format("csv")
+                 .option("header", "true")
+                 .option("inferSchema", "true")
+                 .load(file_path))
+
+    count_sample_df = (sample_df
+                       .select("Variable_code", "Variable_name", "Variable_category","Value")
+                       .groupBy("Variable_code", "Variable_name")
+                       .agg(count("Value").alias("Total"))
+                       .orderBy("Total", ascending=False))
+
+    #count_sample_df.show()
+
+    count_sample_df.show(n=60, truncate=False)
+    print("Total Rows = %d" % (count_sample_df.count()))
+    # input("Press ctrl+c to exit")
+
+    spark.stop()  # Stop the Spark Session
+
+
+if __name__ == "__main__":  # Entry Point of your Python Code
+    try:
+        process_data()
+
+    except Exception as e:
+        print(e)
+        raise
