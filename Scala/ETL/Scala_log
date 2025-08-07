@@ -1,0 +1,411 @@
+Logs
+
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala % mkdir scala-spark-etl
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala % cd scala-spark-etl
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % touch build.sbt
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % vi build.sbt
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % mkdir -p src/main/scala
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % touch src/main/scala/SimpleETL.scala
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % vi SimpleETL.scala
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % sbt run
+
+[info] Updated file /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/project/build.properties: set sbt.version to 1.10.11
+[info] welcome to sbt 1.10.11 (Homebrew Java 17.0.15)
+[info] loading project definition from /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/project
+[info] loading settings for project scala-spark-etl from build.sbt...
+[info] set current project to ScalaSparkETL (in build file:/Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/)
+[info] Updating scalasparketl_2.13
+https://repo1.maven.org/maven2/org/apache/spark/spark-sql_2.13/3.5.1/spark-sql_2.13-3.5.1.pom
+  100.0% [##########] 18.6 KiB (15.3 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-core_2.13/3.5.1/spark-core_2.13-3.5.1.pom
+  100.0% [##########] 41.6 KiB (27.0 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-parent_2.13/3.5.1/spark-parent_2.13-3.5.1.pom
+  100.0% [##########] 133.5 KiB (249.0 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-tags_2.13/3.5.1/spark-tags_2.13-3.5.1.pom
+  100.0% [##########] 5.7 KiB (18.4 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-launcher_2.13/3.5.1/spark-launcher_2.13-3.5.1.pom
+  100.0% [##########] 8.4 KiB (26.1 KiB / s)
+https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.13/2.1.0/scala-xml_2.13-2.1.0.pom
+  100.0% [##########] 2.6 KiB (4.1 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-unsafe_2.13/3.5.1/spark-unsafe_2.13-3.5.1.pom
+  100.0% [##########] 8.2 KiB (11.9 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-catalyst_2.13/3.5.1/spark-catalyst_2.13-3.5.1.pom
+  100.0% [##########] 9.7 KiB (13.5 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-network-common_2.13/3.5.1/spark-network-common_2.13-3.5.1.pom
+  100.0% [##########] 13.6 KiB (19.0 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-sketch_2.13/3.5.1/spark-sketch_2.13-3.5.1.pom
+  100.0% [##########] 6.2 KiB (8.7 KiB / s)
+https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.15.2/jackson-module-scala_2.13-2.15.2.pom
+  100.0% [##########] 4.9 KiB (22.7 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-common-utils_2.13/3.5.1/spark-common-utils_2.13-3.5.1.pom
+  100.0% [##########] 9.4 KiB (30.2 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-kvstore_2.13/3.5.1/spark-kvstore_2.13-3.5.1.pom
+  100.0% [##########] 8.5 KiB (27.2 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-network-shuffle_2.13/3.5.1/spark-network-shuffle_2.13-3.5.1.pom
+  100.0% [##########] 8.5 KiB (26.5 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-sql-api_2.13/3.5.1/spark-sql-api_2.13-3.5.1.pom
+  100.0% [##########] 8.9 KiB (25.7 KiB / s)
+[info] Resolved scalasparketl_2.13 dependencies
+[info] Fetching artifacts of scalasparketl_2.13
+https://repo1.maven.org/maven2/org/apache/spark/spark-unsafe_2.13/3.5.1/spark-unsafe_2.13-3.5.1.jar
+  100.0% [##########] 53.5 KiB (147.4 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-sketch_2.13/3.5.1/spark-sketch_2.13-3.5.1.jar
+  100.0% [##########] 30.1 KiB (74.3 KiB / s)
+https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.13/2.1.0/scala-xml_2.13-2.1.0.jar
+  100.0% [##########] 471.8 KiB (925.0 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-launcher_2.13/3.5.1/spark-launcher_2.13-3.5.1.jar
+  100.0% [##########] 76.6 KiB (132.1 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-kvstore_2.13/3.5.1/spark-kvstore_2.13-3.5.1.jar
+  100.0% [##########] 82.2 KiB (77.1 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-tags_2.13/3.5.1/spark-tags_2.13-3.5.1.jar
+  100.0% [##########] 14.8 KiB (44.2 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-network-shuffle_2.13/3.5.1/spark-network-shuffle_2.13-3.5.1.jar
+  100.0% [##########] 173.5 KiB (279.9 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-sql-api_2.13/3.5.1/spark-sql-api_2.13-3.5.1.jar
+  100.0% [##########] 1.7 MiB (870.3 KiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-common-utils_2.13/3.5.1/spark-common-utils_2.13-3.5.1.jar
+  100.0% [##########] 241.1 KiB (222.4 KiB / s)
+https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.15.2/jackson-module-scala_2.13-2.15.2.jar
+  100.0% [##########] 506.5 KiB (1.1 MiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-network-common_2.13/3.5.1/spark-network-common_2.13-3.5.1.jar
+  100.0% [##########] 2.3 MiB (1.4 MiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-sql_2.13/3.5.1/spark-sql_2.13-3.5.1.jar
+  100.0% [##########] 9.4 MiB (1.1 MiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-core_2.13/3.5.1/spark-core_2.13-3.5.1.jar
+  100.0% [##########] 14.1 MiB (1.2 MiB / s)
+https://repo1.maven.org/maven2/org/apache/spark/spark-catalyst_2.13/3.5.1/spark-catalyst_2.13-3.5.1.jar
+  100.0% [##########] 12.3 MiB (1.1 MiB / s)
+[info] Fetched artifacts of scalasparketl_2.13
+[info] compiling 2 Scala sources to /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/target/scala-2.13/classes ...
+[warn] 1 deprecation (since 2.13.3); re-run with -deprecation for details
+[warn] one warning found
+[info] running SparkETL 
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+25/08/07 12:58:23 WARN Utils: Your hostname, Dhandapanis-MacBook-Pro.local resolves to a loopback address: 127.0.0.1; using 172.20.10.6 instead (on interface en0)
+25/08/07 12:58:23 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+25/08/07 12:58:23 INFO SparkContext: Running Spark version 3.5.1
+25/08/07 12:58:23 INFO SparkContext: OS info Mac OS X, 14.6.1, aarch64
+25/08/07 12:58:23 INFO SparkContext: Java version 17.0.15
+25/08/07 12:58:23 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/08/07 12:58:23 INFO ResourceUtils: ==============================================================
+25/08/07 12:58:23 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/08/07 12:58:23 INFO ResourceUtils: ==============================================================
+25/08/07 12:58:23 INFO SparkContext: Submitted application: ETL
+25/08/07 12:58:23 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/08/07 12:58:23 INFO ResourceProfile: Limiting resource is cpu
+25/08/07 12:58:23 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/08/07 12:58:23 INFO SecurityManager: Changing view acls to: dhandapanidhandapaniyedappalli
+25/08/07 12:58:23 INFO SecurityManager: Changing modify acls to: dhandapanidhandapaniyedappalli
+25/08/07 12:58:23 INFO SecurityManager: Changing view acls groups to: 
+25/08/07 12:58:23 INFO SecurityManager: Changing modify acls groups to: 
+25/08/07 12:58:23 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: dhandapanidhandapaniyedappalli; groups with view permissions: EMPTY; users with modify permissions: dhandapanidhandapaniyedappalli; groups with modify permissions: EMPTY
+25/08/07 12:58:23 INFO Utils: Successfully started service 'sparkDriver' on port 64602.
+25/08/07 12:58:23 INFO SparkEnv: Registering MapOutputTracker
+25/08/07 12:58:23 INFO SparkEnv: Registering BlockManagerMaster
+25/08/07 12:58:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/08/07 12:58:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+Exception in thread "sbt-bg-threads-1" java.lang.IllegalAccessError: Error running public static void SparkETL.main(java.lang.String[]).
+java.lang.IllegalAccessError: class org.apache.spark.storage.StorageUtils$ (in unnamed module @0x52576c66) cannot access class sun.nio.ch.DirectBuffer (in module java.base) because module java.base does not export sun.nio.ch to unnamed module @0x52576c66
+If using a layered classloader, this can occur if jvm package private classes are accessed across layers. This can be fixed by changing to the Flat or ScalaInstance class loader layering strategies.
+        at sbt.Run.invokeMain(Run.scala:144)
+        at sbt.Run.execute$1(Run.scala:85)
+        at sbt.Run.$anonfun$runWithLoader$5(Run.scala:112)
+        at sbt.Run$.executeSuccess(Run.scala:178)
+        at sbt.Run.runWithLoader(Run.scala:112)
+        at sbt.Defaults$.$anonfun$bgRunTask$6(Defaults.scala:2072)
+        at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:2011)
+        at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+        at scala.util.Try$.apply(Try.scala:213)
+        at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:378)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base/java.lang.Thread.run(Thread.java:840)
+[success] Total time: 20 s, completed 7 Aug 2025, 12:58:23
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % 
+
+✅ Fix Plan
+✅ 1. Ensure IntelliJ uses the correct Java SDK (Java 11)
+Step-by-Step:
+1. Go to: IntelliJ IDEA → Preferences → Build, Execution, Deployment → Build Tools → sbt
+2. Set:
+    * Project JDK → Click Add JDK, then choose: swift CopyEdit   /Users/yourname/.sdkman/candidates/java/11.0.20-tem  
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+
+
+echo $SHELL 
+
+
+
+source ~/.zshrc
+
+
+sdk version
+sdk use java 11.0.20-tem
+java -version
+
+
+
+
+
+ nano ~/.zshrc
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % sdk version
+
+SDKMAN!
+script: 5.20.0
+native: 0.7.4 (macos aarch64)
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % sdk use java 11.0.20-tem
+
+Using java version 11.0.20-tem in this shell.
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % 
+
+
+
+
+
+
+
+
+
+
+
+extracting structure failed: Structure file /private/var/folders/f4/z0ldslyx61sb6v_x8zg2snvw0000gn/T/sbt-structure.xml is empty
+stack trace is suppressed; run last scalaInstance for the full output
+(scalaInstance) Expected `hello-world / scalaVersion` to be 2.13.16 or later, but found 2.13.12.
+To support backwards-only binary compatibility (SIP-51), the Scala 2.13 compiler
+should not be older than scala-library on the dependency classpath.
+
+Upgrade the `scalaVersion` to fix the build. If upgrading the Scala compiler version is
+not possible (for example due to a regression in the compiler or a missing dependency),
+this error can be demoted by setting `allowUnsafeScalaLibUpgrade := true`.
+
+See `hello-world / evicted` to know why scala-library 2.13.16 is getting pulled in.
+Total time: 0 s, completed 7 Aug 2025, 14:19:16
+
+
+
+
+
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % source "$HOME/.sdkman/bin/sdkman-init.sh"
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % sdk version
+
+SDKMAN!
+script: 5.20.0
+native: 0.7.4 (macos aarch64)
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % sdk install scala 2.13.16
+
+
+Downloading: scala 2.13.16
+
+In progress...
+
+################################################################################################################################################################ 100.0%
+
+Installing: scala 2.13.16
+Done installing!
+
+
+Setting scala 2.13.16 as default.
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % 
+
+
+
+
+Setting scala 2.13.16 as default.
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % sdk use scala 2.13.16
+
+
+Using scala version 2.13.16 in this shell.
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % 
+
+
+
+
+Using scala version 2.13.16 in this shell.
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % sdk default scala 2.13.16
+setting scala 2.13.16 as the default version for all shells.
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % 
+
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % sdk default scala 2.13.16
+setting scala 2.13.16 as the default version for all shells.
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % 
+
+
+
+-rw-r--r--@ 1 dhandapanidhandapaniyedappalli  staff  474 Aug  7 12:57 SimpleETL.scala
+-rw-r--r--@ 1 dhandapanidhandapaniyedappalli  staff  319 Aug  7 13:09 build.sbt
+drwxr-xr-x@ 4 dhandapanidhandapaniyedappalli  staff  128 Aug  7 12:58 project
+drwxr-xr-x@ 3 dhandapanidhandapaniyedappalli  staff   96 Aug  7 12:57 src
+drwxr-xr-x@ 7 dhandapanidhandapaniyedappalli  staff  224 Aug  7 12:58 target
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % scala SimpleETL.scala
+SimpleETL.scala:1: error: object apache is not a member of package org
+import org.apache.spark.sql.SparkSession
+           ^
+SimpleETL.scala:2: error: object apache is not a member of package org
+import org.apache.spark.sql.functions._
+           ^
+SimpleETL.scala:6: error: not found: value SparkSession
+    val spark = SparkSession.builder.appName("ETL").master("local[*]").getOrCreate()
+                ^
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro scala-spark-etl % mkdir SimpleETL
+cd SimpleETL
+mkdir -p src/main/scala
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro SimpleETL % ls -l
+total 0
+drwxr-xr-x@ 3 dhandapanidhandapaniyedappalli  staff  96 Aug  7 14:29 src
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro SimpleETL % vi build.sbt
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro SimpleETL % sbt run
+copying runtime jar...
+[info] Updated file /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/project/build.properties: set sbt.version to 1.10.11
+[info] welcome to sbt 1.10.11 (Eclipse Adoptium Java 11.0.20)
+[info] loading project definition from /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to SimpleETL (in build file:/Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/)
+[info] Updating temp-module-bde07663ebf5029c076e7b57097cc1dc9cf60cf3
+[info] Resolved temp-module-bde07663ebf5029c076e7b57097cc1dc9cf60cf3 dependencies
+[info] Fetching artifacts of temp-module-bde07663ebf5029c076e7b57097cc1dc9cf60cf3
+[info] Fetched artifacts of temp-module-bde07663ebf5029c076e7b57097cc1dc9cf60cf3
+[error] java.lang.RuntimeException: No main class detected.
+[error]         at scala.sys.package$.error(package.scala:30)
+[error] stack trace is suppressed; run last Compile / bgRun for the full output
+[error] (Compile / bgRun) No main class detected.
+[error] Total time: 4 s, completed 7 Aug 2025, 14:30:58
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro SimpleETL % 
+
+
+
+
+java.nio.file.NoSuchFileException: /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/target/bg-jobs/sbt_331e17c9/target/71c96fb5/359669fc/hadoop-client-api-3.3.4.jar
+        at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+        at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+        at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+        at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+        at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1381)
+        at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:840)
+        at java.base/java.util.zip.ZipFile$CleanableResource$FinalizableResource.<init>(ZipFile.java:866)
+        at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:855)
+        at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:257)
+        at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:186)
+        at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+        at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+        at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+        at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+        at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+        at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:155)
+        at org.apache.hadoop.conf.Configuration.parse(Configuration.java:3009)
+        at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3105)
+        at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3063)
+        at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3036)
+        at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2914)
+        at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2896)
+        at org.apache.hadoop.conf.Configuration.get(Configuration.java:1246)
+        at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1863)
+        at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1840)
+        at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:183)
+        at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:145)
+        at org.apache.hadoop.util.ShutdownHookManager.access$300(ShutdownHookManager.java:65)
+        at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:102)
+Exception in thread "Thread-2" java.lang.RuntimeException: java.nio.file.NoSuchFileException: /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/target/bg-jobs/sbt_331e17c9/target/71c96fb5/359669fc/hadoop-client-api-3.3.4.jar
+        at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3089)
+        at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3036)
+        at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2914)
+        at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2896)
+        at org.apache.hadoop.conf.Configuration.get(Configuration.java:1246)
+        at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1863)
+        at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1840)
+        at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:183)
+        at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:145)
+        at org.apache.hadoop.util.ShutdownHookManager.access$300(ShutdownHookManager.java:65)
+        at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:102)
+Caused by: java.nio.file.NoSuchFileException: /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/target/bg-jobs/sbt_331e17c9/target/71c96fb5/359669fc/hadoop-client-api-3.3.4.jar
+        at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+        at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+        at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+        at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+        at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1381)
+        at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:840)
+        at java.base/java.util.zip.ZipFile$CleanableResource$FinalizableResource.<init>(ZipFile.java:866)
+        at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:855)
+        at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:257)
+        at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:186)
+        at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+        at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+        at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+        at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+        at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+        at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:155)
+        at org.apache.hadoop.conf.Configuration.parse(Configuration.java:3009)
+        at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3105)
+        at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3063)
+        ... 10 more
+
+
+
+
+sbt clean
+sbt update
+sbt compile
+
+
+
+[info] welcome to sbt 1.10.11 (Eclipse Adoptium Java 11.0.20)
+[info] loading project definition from /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to SimpleETL (in build file:/Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/)
+[success] Total time: 0 s, completed 7 Aug 2025, 14:38:58
+[info] welcome to sbt 1.10.11 (Eclipse Adoptium Java 11.0.20)
+[info] loading project definition from /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to SimpleETL (in build file:/Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/)
+[success] Total time: 1 s, completed 7 Aug 2025, 14:39:02
+[info] welcome to sbt 1.10.11 (Eclipse Adoptium Java 11.0.20)
+[info] loading project definition from /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to SimpleETL (in build file:/Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/)
+[info] Executing in batch mode. For better performance use sbt's shell
+[info] compiling 1 Scala source to /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/target/scala-2.13/classes ...
+[warn] 1 deprecation (since 2.13.3); re-run with -deprecation for details
+[warn] one warning found
+[success] Total time: 2 s, completed 7 Aug 2025, 14:39:07
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro SimpleETL % 
+
+
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro SimpleETL % rm -rf ~/.ivy2/cache/org.apache.hadoop/
+rm -rf ~/.sbt/
+rm -rf ~/.cache/coursier/
+
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro SimpleETL % 
+
+
+
+sbt clean update compile
+
+
+
+copying runtime jar...
+[info] [launcher] getting org.scala-sbt sbt 1.10.11  (this may take some time)...
+[info] [launcher] getting Scala 2.12.20 (for sbt)...
+[info] welcome to sbt 1.10.11 (Eclipse Adoptium Java 11.0.20)
+[info] loading project definition from /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to SimpleETL (in build file:/Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/)
+[info] Executing in batch mode. For better performance use sbt's shell
+[success] Total time: 0 s, completed 7 Aug 2025, 14:40:27
+[success] Total time: 2 s, completed 7 Aug 2025, 14:40:29
+[info] compiling 1 Scala source to /Users/dhandapanidhandapaniyedappalli/Downloads/scala/scala-spark-etl/SimpleETL/target/scala-2.13/classes ...
+[warn] 1 deprecation (since 2.13.3); re-run with -deprecation for details
+[warn] one warning found
+[success] Total time: 3 s, completed 7 Aug 2025, 14:40:32
+dhandapanidhandapaniyedappalli@Dhandapanis-MacBook-Pro SimpleETL % 
+
