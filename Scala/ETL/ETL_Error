@@ -1,0 +1,42 @@
+Exception in thread "main" java.lang.IllegalAccessError: class org.apache.spark.storage.StorageUtils$ (in unnamed module @0x68c9d179) cannot access class sun.nio.ch.DirectBuffer (in module java.base) because module java.base does not export sun.nio.ch to unnamed module @0x68c9d179
+	at org.apache.spark.storage.StorageUtils$.<init>(StorageUtils.scala:213)
+	at org.apache.spark.storage.StorageUtils$.<clinit>(StorageUtils.scala)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint.<init>(BlockManagerMasterEndpoint.scala:121)
+	at org.apache.spark.SparkEnv$.$anonfun$create$9(SparkEnv.scala:358)
+	at org.apache.spark.SparkEnv$.registerOrLookupEndpoint$1(SparkEnv.scala:295)
+	at org.apache.spark.SparkEnv$.create(SparkEnv.scala:344)
+	at org.apache.spark.SparkEnv$.createDriverEnv(SparkEnv.scala:196)
+	at org.apache.spark.SparkContext.createSparkEnv(SparkContext.scala:284)
+ChatGPT said:
+The error you're seeing:
+java.lang.IllegalAccessError: class org.apache.spark.storage.StorageUtils$ (in unnamed module ...) cannot access class sun.nio.ch.DirectBuffer (in module java.base)
+is due to module restrictions in Java 17+. Spark tries to access internal Java classes like sun.nio.ch.DirectBuffer, which are no longer accessible by default in Java 9 and above due to strong module encapsulation introduced in the Java Platform Module System (JPMS).
+🔍 Root Cause
+You're likely running:
+Apache Spark 3.x
+Java 17 (or newer)
+But Spark 3.x (especially <3.4) is not fully compatible with Java 17 due to internal access to JDK-internal APIs.
+✅ Solutions
+✅ Option 1: Add JVM options to open the internal module
+You can allow access by adding JVM flags to open up the internal package sun.nio.ch to unnamed modules.
+If you're running your Spark application via spark-submit, add this to your environment:
+
+export SPARK_SUBMIT_OPTS="--add-exports java.base/sun.nio.ch=ALL-UNNAMED"
+If you're using spark-shell or launching your app via code, you can also append it to your command like:
+spark-submit \
+  --conf "spark.driver.extraJavaOptions=--add-exports java.base/sun.nio.ch=ALL-UNNAMED" \
+  --conf "spark.executor.extraJavaOptions=--add-exports java.base/sun.nio.ch=ALL-UNNAMED" \
+  your_spark_app.jar
+✅ Option 2: Downgrade Java to Java 8 or Java 11
+If you're using Spark <3.4, it's best to stick with:
+Java 8 (LTS)
+Java 11 (also widely supported)
+Spark 3.1 and 3.2 officially support Java 8 and 11 but not Java 17.
+✅ Option 3: Upgrade to Spark 3.4+ or 3.5+
+Spark 3.4 and 3.5 added better Java 17+ support
+Still, some issues may persist, so you might still need the --add-exports flag above
+🧪 Recommendation
+For stable production or learning use:
+Use Java 8 or 11
+Or add the JVM --add-exports flags if using Java 17+
+Would you like help with setting up your environment properly (Java + Spark + Scala) for your system (e.g., macOS/Linux)?
