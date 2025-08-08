@@ -1,0 +1,50 @@
+AWK-GREP
+
+
+Both awk and grep are powerful Unix tools — but they serve different purposes, and which one you should use depends on your specific task.
+
+Use grep when:
+You want to search for lines that match a pattern.
+📌 Examples:
+bash
+CopyEdit
+# Find lines containing "error"
+grep "error" logfile.txt
+
+# Count matching lines
+grep -c "success" output.log
+* ✅ Fast and lightweight
+* ❌ Can't do field-based processing or arithmetic
+
+Use awk when:
+You want to process and extract fields, or do arithmetic, formatting, or conditional logic.
+📌 Examples:
+bash
+CopyEdit
+# Print second column
+awk '{print $2}' data.txt
+
+# Print lines where column 3 > 100
+awk '$3 > 100' data.txt
+
+# Print total sum of column 2
+awk '{sum += $2} END {print sum}' data.txt
+* ✅ Great for field-level processing
+* ✅ Can use conditions, loops, and math
+* ❌ Slightly heavier than grep
+
+💡 TL;DR – When to Use What:
+Task	Use
+Search for a string in file	grep
+Search with regex	grep -E
+Extract specific columns	awk
+Do math (sum, average, etc.)	awk
+Filter by field value	awk
+Count matching lines	grep -c or awk 'END{print NR}' (if filtered)
+
+🔄 Sometimes combine both:
+bash
+CopyEdit
+# First filter lines with grep, then extract field with awk
+grep "ERROR" app.log | awk '{print $5}'
+Let me know what you're trying to do — I’ll tell you which to use with an example.
