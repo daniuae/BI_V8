@@ -15,3 +15,6 @@ Download this git to your machine.
 https://github.com/skalskibukowa/Project-Spark-Scala-ETL.git
 or
 git clone https://github.com/skalskibukowa/Project-Spark-Scala-ETL.git
+
+Intellij Run Configuration
+--add-opens java.base/sun.nio.ch=ALL-UNNAMED
