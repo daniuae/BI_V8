@@ -19,10 +19,19 @@ Scala Github
    https://github.com/scala/scala
    https://github.com/databricks/learning-spark-v2
 
-
 Websites 
    https://sparkbyexamples.com
 
 Spark Official  
   https://spark.apache.org/docs/latest/
 
+Recommended Books and Resources
+
+Programming in Scala (3rd Edition) by Martin Odersky, Lex Spoon, and Bill Venners
+The definitive Scala book by Scala’s creator.
+Scala for the Impatient by Cay S. Horstmann
+Concise and practical introduction.
+Functional Programming in Scala by Paul Chiusano and Rúnar Bjarnason
+Deep dive into FP concepts in Scala.
+Scala Cookbook by Alvin Alexander
+Lots of practical examples.
