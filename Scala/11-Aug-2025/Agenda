@@ -1,16 +1,23 @@
 --Agenda for today
   Theory - Morning
-    Higher Kinded Types
-    Implicits
-    Typeclasses
-    For Comprehensions
-    Case Classes
-    Top Level Definitions
-    Exports
-
+  - [x] ✓ Overview of Hadoop HDFS Commands
+  - [x] ✓ Apache Spark 2 using Scala - Data Processing – Overview
+  - [x] ✓ Apache Spark 2 using Scala - Processing Column Data using Pre-defined Functions
+  - [x] ✓ Apache Spark 2 using Scala - Basic Transformations using Data Frames
+  - [x] ✓ Apache Spark 2 using Scala - joining Data Sets
+  - [x] ✓ Apache Spark 2 using SQL - Getting Started
+  - [x] ✓ Apache Spark 2 using SQL - Basic Transformations
+  - [x] ✓ Apache Spark 2 using SQL - Basic DDL and DML
+  - [x] ✓ Apache Spark 2 using SQL - DML and Partitioning
+  - [ ] ✓ Apache Spark 2 using SQL - Pre -Defined Functions
+  - [ ] ✓ Apache Spark 2 using SQL - Pre -Defined Functions - Exercises
+  - [ ] ✓ Apache Spark 2 using SQL - Windowing Functions
+  - [ ] ✓ Sample scenarios with solutions
   Quiz
-
+    
   Videos
+  https://www.youtube.com/watch?v=aReuLtY0YMI
+  https://www.youtube.com/watch?v=cHGaQz0E7AU
 
   Programs Afternoon - After Lunch
     Scala Programs 
@@ -20,5 +27,6 @@
   Practicals and Handson - 
   Surveys 
   
-  
+  https://github.com/daniuae/BI_V8/tree/main/Scala/11-Aug-2025/Code
+
 
