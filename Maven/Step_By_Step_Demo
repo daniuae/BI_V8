@@ -1,0 +1,148 @@
+
+How to check  maven version?
+mvn --version
+
+A project templating toolkit that provides a pre-defined structure for creating new projects?
+mvn archtype
+
+Create directory.
+mkdir temp
+
+Install clean and maven
+mvn clean install
+
+
+—Create Project
+
+mvn archetype:generate -DgroupId=com.example \
+  -DartifactId=myproject \
+  -DarchetypeArtifactId=maven-archetype-quickstart \
+  -DinteractiveMode=false
+
+
+cd myproject
+mvn clean install
+
+For Spark with Scala via Maven, your pom.xml should have dependencies for:
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-core_2.12</artifactId>
+    <version>2.4.8</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-sql_2.12</artifactId>
+    <version>2.4.8</version>
+</dependency>
+
+
+Reference:
+
+https://jb.gg/4r7d6s
+
+Introduction to Archetypes - Apache MavenApache Mavenhttps://maven.apache.org › guides › introduction-to-arc...
+
+
+mvnw validate
+
+MP3 Project 
+https://mvnrepository.com/artifact/com.mpatric/mp3agic/0.9.0
+
+Delete the target folder
+mvn clean
+
+Compile 
+mvn compile
+
+Compile  test
+mvn compile test
+
+Compile Clean test and package to Jar file
+mvn clean compile test package
+
+mvn compile test package
+
+mvn install
+
+Cloning Repository
+
+Git clone https://github.com/marcobehlerjetbrains/maven-tutorial
+
+
+Maven sample project
+/Users/dhandapanidhandapaniyedappalli/Downloads/mavendemo/maven-tutorial
+
+
+Maven wrapper for windows
+
+mvn wrapper:wrapper 
+
+Version check 
+mvnw -v
+
+Validate the maven in project
+mvn validate
+
+How to search for the the maven library from internet?
+java mp3 library for maven
+
+————————————————————————
+
+
+REF1: Maven Tutorial GitHub Repository
+https://github.com/marcobehlerjetbrains/maven-tutorial.git
+
+REF2: Put Maven On PATH
+Windows: setx PATH=%PATH%;C:\your\path\here\ (needs an elevated prompt)
+
+Linux + MacOS:
+1. Edit: ~/.bash_profile
+2. Add Line: “export PATH=”/your/dir:$PATH"” //“ export PATH=“/Users/dhandapanidhandapaniyedappalli:$PATH”
+3. Run: source ~/.bash_profile
+
+REF3: Pom.xml File - Overview
+Maven – Introduction to the POM (apache.org)
+
+REF4: Scopes
+Maven – Introduction to the Dependency Mechanism (apache.org)
+
+REF5: Maven Search
+Maven Central Repository Search
+
+REF6: Central Maven Repository
+https://repo1.maven.org/maven2/
+
+REF7: Further Reading
+mvn clean install -
+
+https://www.marcobehler.com/guides/mvn-clean-install-a-short-guide-to-maven
+
+Maven: The Complete Reference -
+https://books.sonatype.com/mvnref-book/reference/index.html
+
+
+Temp java version change
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)  # macOS
+# or for Linux
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+
+
+Windows PowerShell
+
+$env:JAVA_HOME="C:\Program Files\Java\jdk-11"
+$env:Path="$env:JAVA_HOME\bin;$env:Path"
+
+Maven Global Repository
+Local
+Remote
+Global
+
+https://mvnrepository.com/artifact/com.mpatric/mp3agic/0.9.0
+
+1. Project Id
+2. GroupId - com.dani
+3. Artificatid - Scala-Project
+4. Packageid - 
+
+git project with multiple dependencies with in project use maven project
