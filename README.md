@@ -1,0 +1,1 @@
+https://www.google.com/search?q=beeline+create+hive+database+and+tables&oq=beeline+create+hive+database+and+tables&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRifBTIHCAMQIRifBTIHCAQQIRifBTIHCAUQIRifBdIBCTE4NTkwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
