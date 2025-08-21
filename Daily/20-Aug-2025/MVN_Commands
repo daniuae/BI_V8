@@ -1,0 +1,49 @@
+MVN
+
+mvn -v
+mvn clean
+mvn compile
+mvn validate
+mvn test
+mvn package
+mvn install
+mvn deploy
+
+mvn build
+mvn archetype:generate
+mvn exec:java -Dexec.mainClass="com.example.Main"
+mvn clean install
+mvn clean install -DskipTests
+mvn clean install -U
+mvn clean install -T 4
+
+target/your-app-name-1.0-SNAPSHOT.jar
+mvn exec:java -Dexec.mainClass="com.example.MainApp"
+java -cp target/your-app-name-1.0-SNAPSHOT.jar com.example.MainApp
+spark-submit --class com.example.MainApp target/your-app-name-1.0-SNAPSHOT.jar
+spark-submit --class com.spark.etl.utils target/ScalaSparkETLArchetype-1.0-SNAPSHOT.jar
+
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+export PATH=$JAVA_HOME/bin:$PATH
+
+
+sbt clean package
+target/scala-2.13/ScalaSparkETLArchetype_2.13-1.0-SNAPSHOT.jar
+
+ls target/scala-2.13/*.jar
+target/scala-2.13/ScalaSparkETLArchetype_2.13-1.0-SNAPSHOT.jar
+
+spark-submit \
+  --class com.spark.etl.utils.YourMainClass \
+  target/scala-2.13/ScalaSparkETLArchetype_2.13-1.0-SNAPSHOT.jar
+package com.spark.etl.utils
+
+object ETLJob extends App {
+  // your Spark code
+}
+
+
+
+spark-submit --class com.spark.etl.utils.ETLJob target/scala-2.13/ScalaSparkETLArchetype_2.13-1.0-SNAPSHOT.jar
+
