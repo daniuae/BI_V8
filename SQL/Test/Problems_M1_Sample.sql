@@ -37,3 +37,31 @@ EMP_NAME	SALARY	DEPT_NAME
 Sita	65000	HR
 Neha	70000	Finance
 Raj	50000	IT
+
+
+---------------------------------------------------------------
+
+
+🧩 6️⃣ Total Salary Expense per Department
+❓Problem
+Show each department’s total salary expense.
+
+📊 Output
+DEPT_NAME	TOTAL_EXPENSE
+IT	98000
+HR	65000
+Finance	70000
+
+---------------------------------------------------------------
+
+
+🧩 9️⃣ Department-Wise Rank
+❓Problem
+Rank employees within each department by salary.
+
+📊 Output
+EMP_NAME	DEPT_NAME	SALARY	DEPT_RANK
+Raj	IT	50000	1
+Amit	IT	48000	2
+Sita	HR	65000	1
+Neha	Finance	70000	1
